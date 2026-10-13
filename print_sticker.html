@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Stiker Barcode Pintu Warga (3:4) - Alif Setiawan</title>
+  <title>Stiker Barcode Pintu Warga - Alif Setiawan</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -29,178 +29,110 @@
     }
   </script>
   <style>
-    body {
+    * {
+      box-sizing: border-box;
+    }
+    html, body {
       margin: 0;
       padding: 0;
-      width: 900px;
-      height: 1200px;
+      width: 380px;
+      height: 550px;
       overflow: hidden;
-      background: #f8fafc;
+      background: #ffffff;
     }
   </style>
 </head>
-<body class="flex items-center justify-center font-sans antialiased text-slate-800">
-  
-  <!-- Container with 3:4 aspect ratio (900px x 1200px) -->
-  <div class="w-[900px] h-[1200px] bg-white relative overflow-hidden flex flex-col justify-between border-4 border-emerald-700/40 shadow-2xl">
+<body class="font-sans antialiased text-slate-800">
+
+  <div class="w-[380px] h-[550px] bg-white rounded-3xl shadow-2xl overflow-hidden border-2 border-slate-300 flex flex-col justify-between relative">
     
-    <!-- ============================================== -->
-    <!-- 1. HEADER HERO (BANNER + SLOGAN + PROFILE)     -->
-    <!-- ============================================== -->
-    <header class="relative bg-gradient-to-b from-brand-950 via-brand-900 to-emerald-800 text-white p-7 overflow-hidden shrink-0 border-b-4 border-amber-400">
+    <!-- Header Banner with Landscape Background -->
+    <div class="h-32 bg-gradient-to-b from-brand-900 via-brand-800 to-emerald-700 relative p-3 flex flex-col justify-between text-white overflow-hidden shrink-0">
+      <img src="Asset Image/banner-tegalpingen.jpeg" alt="Jembatan Merah Tegalpingen" class="absolute inset-0 w-full h-full object-cover object-[center_50%] opacity-30 mix-blend-overlay pointer-events-none">
       
-      <!-- Background Landscape Photo (Jembatan Merah Tegalpingen) -->
-      <img 
-        src="Asset Image/banner-tegalpingen.jpeg" 
-        alt="Jembatan Merah Tegalpingen" 
-        class="absolute inset-0 w-full h-full object-cover object-[center_48%] opacity-30 mix-blend-overlay pointer-events-none"
-      />
-      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/40 pointer-events-none"></div>
-
-      <!-- Top Badges Row -->
-      <div class="relative z-10 flex items-center justify-between mb-4">
-        <div class="flex items-center gap-2 bg-black/60 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/20 shadow-sm text-white">
-          <i class="fa-solid fa-location-dot text-emerald-400 text-sm"></i>
-          <span class="text-xs font-bold tracking-wide">Desa Tegalpingen, Pengadegan</span>
-        </div>
-        
-        <div class="flex items-center gap-1.5 bg-amber-400 text-slate-950 px-3.5 py-1.5 rounded-full text-xs font-black uppercase tracking-wider shadow-md">
-          <i class="fa-solid fa-bolt text-xs"></i>
-          <span>Siaga 24 Jam</span>
-        </div>
-      </div>
-
-      <!-- Hero Candidate Profile Card (Integrated in Header) -->
-      <div class="relative z-10 flex items-center gap-6 bg-black/35 backdrop-blur-md p-4 rounded-3xl border border-white/15">
-        
-        <!-- Avatar Photo -->
-        <div class="w-28 h-28 rounded-2xl border-4 border-amber-400 overflow-hidden shadow-2xl shrink-0 bg-slate-800 ring-4 ring-white/10">
-          <img src="Asset Image/cakades.jpeg" alt="Alif Setiawan" class="w-full h-full object-cover object-[center_12%]">
-        </div>
-
-        <!-- Candidate Info & Slogan -->
-        <div class="min-w-0 flex-1">
-          <div class="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-500/25 border border-emerald-400/40 rounded-full text-[11px] font-black uppercase tracking-widest text-emerald-300 mb-1">
-            <i class="fa-solid fa-circle-check text-[10px]"></i>
-            <span>Calon Kepala Desa</span>
-          </div>
-
-          <h1 class="text-3xl font-black text-white leading-tight tracking-tight">Alif Setiawan</h1>
-          <p class="text-xs text-emerald-100/90 font-semibold">Kecamatan Pengadegan, Purbalingga</p>
-
-          <!-- Campaign Badge Banner (Matches Photo Slogan) -->
-          <div class="mt-2.5 inline-block bg-gradient-to-r from-emerald-600 via-brand-700 to-emerald-600 border border-amber-300/50 px-3.5 py-1 rounded-xl shadow-md">
-            <span class="text-xs font-black text-amber-300 uppercase tracking-wider">
-              "YANG MUDA BERKARYA, UNTUK MEMBANGUN DESA"
-            </span>
-          </div>
-        </div>
-
-      </div>
-
-    </header>
-
-    <!-- ============================================== -->
-    <!-- 2. BODY CONTENT (HEADLINE + BIG QR + CALL TO ACTION) -->
-    <!-- ============================================== -->
-    <main class="flex-1 flex flex-col items-center justify-between px-8 py-6 text-center bg-white">
-      
-      <!-- Call to Action Headline -->
-      <div class="w-full">
-        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-50 text-red-700 border border-red-200 text-xs font-black uppercase tracking-wider mb-2">
-          <i class="fa-solid fa-bell text-red-600 animate-bounce"></i>
-          <span>Portal Kontak Resmi Desa Tegalpingen</span>
+      <div class="relative z-10 flex items-center justify-between">
+        <span class="bg-black/40 backdrop-blur-md px-2.5 py-0.5 rounded-full text-[9px] font-bold border border-white/20">
+          📍 Desa Tegalpingen, Pengadegan
         </span>
-        
-        <h2 class="text-2xl font-black text-slate-900 uppercase tracking-tight leading-snug">
+        <span class="bg-amber-400 text-slate-900 px-2 py-0.5 rounded-md text-[9px] font-black uppercase">
+          Siaga 24 Jam
+        </span>
+      </div>
+
+      <div class="relative z-10 text-center">
+        <div class="inline-block bg-brand-900/90 border border-amber-400/50 px-3 py-1 rounded-xl shadow-md mb-1.5">
+          <span class="block text-[11px] font-black text-amber-300 uppercase tracking-wider">YANG MUDA BERKARYA</span>
+          <span class="block text-[8px] font-extrabold text-white uppercase tracking-widest">UNTUK MEMBANGUN DESA</span>
+        </div>
+        <h3 class="text-xs font-black tracking-tight text-white uppercase leading-snug">
           SIMPAN NOMOR PENTING DESA DI HP ANDA!
-        </h2>
-        
-        <p class="text-sm font-semibold text-slate-500 mt-1">
-          Akses 1 Pintu untuk Ambulans, Bidan, Kadus, RT/RW, dan Aspirasi Warga
+        </h3>
+        <p class="text-[9px] text-emerald-100 font-medium">
+          Satu Barcode untuk Semua Kebutuhan Warga Tegalpingen
         </p>
       </div>
+    </div>
 
-      <!-- Center QR Code Box -->
-      <div class="my-auto flex flex-col items-center">
-        
-        <div class="p-4 bg-white border-4 border-brand-700 rounded-3xl shadow-xl inline-block relative group">
-          <img 
-            src="https://api.qrserver.com/v1/create-qr-code/?size=380x380&data=https%3A%2F%2Fprototype-cakades-tegalpingen.vercel.app%2F&color=047857" 
-            alt="Barcode Resmi Desa Tegalpingen" 
-            class="w-60 h-60 mx-auto rounded-xl"
-          />
-        </div>
-
-        <div class="mt-3 flex items-center gap-2 bg-emerald-50 px-4 py-1.5 rounded-full border border-emerald-200">
-          <i class="fa-solid fa-camera text-brand-700 text-sm"></i>
-          <span class="text-xs font-black text-brand-900 tracking-wide uppercase">
-            ARAHKAN KAMERA HP ANDA KE BARCODE INI
-          </span>
-        </div>
-
+    <!-- Candidate Profile Strip -->
+    <div class="px-4 py-2 bg-emerald-50 border-b border-emerald-100 flex items-center gap-3 shrink-0">
+      <div class="w-14 h-14 rounded-full border-2 border-emerald-600 overflow-hidden shadow-sm shrink-0 bg-white">
+        <img src="Asset Image/cakades.jpeg" alt="Alif Setiawan" class="w-full h-full object-cover object-[center_12%]">
       </div>
-
-      <!-- 4 Emergency Services Grid (Harmonious & Proportional) -->
-      <div class="w-full grid grid-cols-2 gap-3 mt-4 text-left">
-        
-        <div class="bg-slate-50 p-3 rounded-2xl border border-slate-200/90 flex items-center gap-3 shadow-xs">
-          <div class="w-11 h-11 rounded-xl bg-red-100 text-red-600 flex items-center justify-center text-lg shrink-0">
-            <i class="fa-solid fa-truck-medical"></i>
-          </div>
-          <div class="min-w-0">
-            <p class="text-xs font-black text-slate-900 leading-tight">Ambulans Siaga 24 Jam</p>
-            <p class="text-[11px] text-slate-500 font-medium">Layanan Cepat Darurat Medis</p>
-          </div>
-        </div>
-
-        <div class="bg-slate-50 p-3 rounded-2xl border border-slate-200/90 flex items-center gap-3 shadow-xs">
-          <div class="w-11 h-11 rounded-xl bg-emerald-100 text-brand-700 flex items-center justify-center text-lg shrink-0">
-            <i class="fa-solid fa-user-doctor"></i>
-          </div>
-          <div class="min-w-0">
-            <p class="text-xs font-black text-slate-900 leading-tight">Bidan Desa Tegalpingen</p>
-            <p class="text-[11px] text-slate-500 font-medium">Konsultasi & Layanan Ibu-Anak</p>
-          </div>
-        </div>
-
-        <div class="bg-slate-50 p-3 rounded-2xl border border-slate-200/90 flex items-center gap-3 shadow-xs">
-          <div class="w-11 h-11 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-lg shrink-0">
-            <i class="fa-solid fa-shield"></i>
-          </div>
-          <div class="min-w-0">
-            <p class="text-xs font-black text-slate-900 leading-tight">Babinsa & Bhabinkamtibmas</p>
-            <p class="text-[11px] text-slate-500 font-medium">Keamanan TNI & Polri Wilayah</p>
-          </div>
-        </div>
-
-        <div class="bg-slate-50 p-3 rounded-2xl border border-slate-200/90 flex items-center gap-3 shadow-xs">
-          <div class="w-11 h-11 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-lg shrink-0">
-            <i class="fa-solid fa-comments"></i>
-          </div>
-          <div class="min-w-0">
-            <p class="text-xs font-black text-slate-900 leading-tight">Lapor Pak Kades (Aspirasi)</p>
-            <p class="text-[11px] text-slate-500 font-medium">WhatsApp Langsung ke Calon Kades</p>
-          </div>
-        </div>
-
+      <div>
+        <p class="text-[9px] font-bold text-brand-700 uppercase tracking-wider">Calon Kepala Desa</p>
+        <h4 class="text-sm font-black text-slate-900 leading-tight">Alif Setiawan</h4>
+        <p class="text-[9px] text-brand-800 font-extrabold uppercase tracking-tight">"Yang Muda Berkarya, Untuk Membangun Desa"</p>
       </div>
+    </div>
 
-    </main>
-
-    <!-- ============================================== -->
-    <!-- 3. FOOTER BRANDING                            -->
-    <!-- ============================================== -->
-    <footer class="bg-brand-950 text-white text-center py-4 px-6 shrink-0 border-t-2 border-emerald-800">
-      <p class="text-xs font-semibold text-emerald-100">
-        Cukup Scan 1 Kali • Simpan Link Portal di Layar Utama HP Anda
+    <!-- Body: The Big Scan Action -->
+    <div class="p-4 flex flex-col items-center justify-center flex-1 text-center bg-white">
+      
+      <p class="text-[11px] font-extrabold text-slate-800 mb-2">
+        Arahkan Kamera HP ke Barcode Ini:
       </p>
-      <div class="flex items-center justify-center gap-2 mt-1 text-[11px] text-emerald-300 font-bold">
-        <span>&copy; 2026 Tim Relawan Pemenangan Alif Setiawan</span>
-        <span class="w-1 h-1 bg-emerald-400 rounded-full"></span>
-        <span>Desa Tegalpingen, Pengadegan</span>
+
+      <!-- Huge QR Code -->
+      <div class="p-2.5 bg-white border-4 border-brand-700 rounded-2xl shadow-lg inline-block">
+        <img 
+          id="qr-preview-sticker"
+          src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A%2F%2Fprototype-cakades-tegalpingen.vercel.app%2F&color=047857" 
+          alt="Barcode Warga" 
+          class="w-36 h-36 mx-auto rounded-lg"
+        />
       </div>
-    </footer>
+
+      <!-- Direct Services List -->
+      <div class="grid grid-cols-2 gap-1.5 w-full mt-3 text-left">
+        <div class="bg-slate-50 p-1.5 rounded-lg border border-slate-200/80 flex items-center gap-1.5">
+          <i class="fa-solid fa-truck-medical text-red-500 text-xs"></i>
+          <span class="text-[9px] font-bold text-slate-700">Ambulans 24 Jam</span>
+        </div>
+        <div class="bg-slate-50 p-1.5 rounded-lg border border-slate-200/80 flex items-center gap-1.5">
+          <i class="fa-solid fa-user-doctor text-emerald-600 text-xs"></i>
+          <span class="text-[9px] font-bold text-slate-700">Bidan Desa</span>
+        </div>
+        <div class="bg-slate-50 p-1.5 rounded-lg border border-slate-200/80 flex items-center gap-1.5">
+          <i class="fa-solid fa-shield text-blue-600 text-xs"></i>
+          <span class="text-[9px] font-bold text-slate-700">Babinsa & Polsek</span>
+        </div>
+        <div class="bg-slate-50 p-1.5 rounded-lg border border-slate-200/80 flex items-center gap-1.5">
+          <i class="fa-solid fa-comments text-amber-500 text-xs"></i>
+          <span class="text-[9px] font-bold text-slate-700">Aspirasi Warga</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Sticker Footer -->
+    <div class="bg-slate-900 text-white text-center py-2 px-3 shrink-0">
+      <p class="text-[9px] font-semibold text-slate-300">
+        Cukup Scan 1 Kali, Simpan Link-nya di WhatsApp / Layar Utama HP
+      </p>
+      <p class="text-[8px] text-emerald-400 font-bold mt-0.5">
+        &copy; 2026 Tim Relawan Alif Setiawan | Desa Tegalpingen
+      </p>
+    </div>
 
   </div>
 
