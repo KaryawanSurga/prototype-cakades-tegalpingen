@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Kartu Pintar Belakang - Barcode Alif Setiawan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+          colors: {
+            brand: { 50: '#ecfdf5', 600: '#059669', 700: '#047857', 800: '#065f46', 900: '#064e3b' }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      width: 840px;
+      height: 530px;
+      overflow: hidden;
+      background: #f8fafc;
+    }
+  </style>
+</head>
+<body class="flex items-center justify-center font-sans antialiased">
+  
+  <div class="w-[840px] h-[530px] bg-white relative overflow-hidden flex flex-col justify-between p-8 text-slate-800 border-2 border-slate-300">
+    
+    <!-- Top Row: Instruksi Scan -->
+    <div class="text-center">
+      <span class="inline-flex items-center gap-2 bg-red-50 text-red-700 font-black text-xs px-4 py-1.5 rounded-full border border-red-200 uppercase tracking-wider">
+        <i class="fa-solid fa-circle-exclamation text-sm"></i>
+        <span>PUSAT KONTAK PENTING DESA TEGALPINGEN</span>
+      </span>
+      <h4 class="text-base font-black text-slate-900 mt-2 uppercase tracking-tight">
+        SCAN MENGGUNAKAN KAMERA HP UNTUK AKSES SELURUH NOMOR DESA
+      </h4>
+    </div>
+
+    <!-- Middle Row: QR Code Besar & Daftar Kontak Cepat -->
+    <div class="flex items-center justify-center gap-8 my-auto px-4">
+      
+      <!-- QR Code Container -->
+      <div class="p-3 bg-white border-4 border-emerald-600 rounded-2xl shadow-xl shrink-0 text-center">
+        <img 
+          src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A%2F%2Fprototype-cakades-tegalpingen.vercel.app%2F&color=047857" 
+          alt="Barcode Desa Tegalpingen" 
+          class="w-44 h-44 mx-auto rounded-lg"
+        />
+        <span class="block text-[11px] font-black text-emerald-800 mt-1 uppercase tracking-wide">ARAHKAN KAMERA HP KE BARCODE</span>
+      </div>
+
+      <!-- Bullet List Kontak (Alasan Warga Wajib Scan) -->
+      <div class="flex-1 space-y-2.5 text-xs">
+        <div class="flex items-center gap-3 font-bold text-slate-800 bg-slate-50 p-2.5 rounded-xl border border-slate-200/80">
+          <span class="w-7 h-7 rounded-lg bg-red-100 text-red-600 flex items-center justify-center text-sm shrink-0">
+            <i class="fa-solid fa-truck-medical"></i>
+          </span>
+          <span class="text-sm font-extrabold">Ambulans Siaga Desa 24 Jam</span>
+        </div>
+
+        <div class="flex items-center gap-3 font-bold text-slate-800 bg-slate-50 p-2.5 rounded-xl border border-slate-200/80">
+          <span class="w-7 h-7 rounded-lg bg-emerald-100 text-brand-600 flex items-center justify-center text-sm shrink-0">
+            <i class="fa-solid fa-user-doctor"></i>
+          </span>
+          <span class="text-sm font-extrabold">Bidan Desa Tegalpingen</span>
+        </div>
+
+        <div class="flex items-center gap-3 font-bold text-slate-800 bg-slate-50 p-2.5 rounded-xl border border-slate-200/80">
+          <span class="w-7 h-7 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-sm shrink-0">
+            <i class="fa-solid fa-shield"></i>
+          </span>
+          <span class="text-sm font-extrabold">Babinsa & Bhabinkamtibmas Polsek</span>
+        </div>
+
+        <div class="flex items-center gap-3 font-bold text-slate-800 bg-slate-50 p-2.5 rounded-xl border border-slate-200/80">
+          <span class="w-7 h-7 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center text-sm shrink-0">
+            <i class="fa-solid fa-comments"></i>
+          </span>
+          <span class="text-sm font-extrabold">Kotak Aspirasi Langsung ke Alif Setiawan</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Row: CTA & Attribution -->
+    <div class="pt-3 border-t border-slate-200 text-center flex items-center justify-between text-xs">
+      <p class="text-slate-500 font-medium">
+        Langsung scan lewat kamera HP tanpa perlu install aplikasi apapun.
+      </p>
+      <p class="font-black text-brand-700">
+        Calon Kepala Desa: <strong>Alif Setiawan</strong>
+      </p>
+    </div>
+
+  </div>
+
+</body>
+</html>
