@@ -98,7 +98,7 @@
           <input 
             type="text" 
             id="qr-url-input" 
-            value="https://prototype-cakades-tegalpingen.vercel.app" 
+            value="https://prototype-cakades-tegalpingen.vercel.app/" 
             placeholder="Link Vercel Anda..."
             class="bg-transparent text-xs text-slate-800 font-medium focus:outline-none w-56 truncate"
             oninput="updateQrCode(this.value)"
@@ -188,8 +188,8 @@
               </span>
               <h3 class="text-base font-black text-white leading-tight truncate tracking-tight">Alif Setiawan</h3>
               <p class="text-[10px] text-slate-300 font-medium">Kec. Pengadegan, Purbalingga</p>
-              <p class="text-[9px] text-amber-300 font-semibold italic mt-1 leading-tight">
-                "Maju • Guyub Rukun • Transparan • Siaga 24 Jam"
+              <p class="text-[9px] text-amber-300 font-extrabold tracking-tight mt-1 leading-tight uppercase">
+                "Yang Muda Berkarya, Untuk Membangun Desa"
               </p>
             </div>
           </div>
@@ -222,7 +222,7 @@
             <div class="p-1.5 bg-white border-2 border-emerald-600 rounded-xl shadow-md shrink-0 text-center">
               <img 
                 id="qr-preview-card"
-                src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://prototype-cakades-tegalpingen.vercel.app&color=047857" 
+                src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https%3A%2F%2Fprototype-cakades-tegalpingen.vercel.app%2F&color=047857" 
                 alt="Barcode Desa" 
                 class="w-24 h-24 mx-auto rounded-lg"
               />
@@ -303,10 +303,14 @@
             </div>
 
             <div class="relative z-10 text-center">
-              <h3 class="text-sm font-black tracking-tight text-yellow-300 uppercase leading-snug">
+              <div class="inline-block bg-brand-900/90 border border-amber-400/50 px-3 py-1 rounded-xl shadow-md mb-1.5">
+                <span class="block text-[11px] font-black text-amber-300 uppercase tracking-wider">YANG MUDA BERKARYA</span>
+                <span class="block text-[8px] font-extrabold text-white uppercase tracking-widest">UNTUK MEMBANGUN DESA</span>
+              </div>
+              <h3 class="text-xs font-black tracking-tight text-white uppercase leading-snug">
                 SIMPAN NOMOR PENTING DESA DI HP ANDA!
               </h3>
-              <p class="text-[10px] text-emerald-100 font-medium">
+              <p class="text-[9px] text-emerald-100 font-medium">
                 Satu Barcode untuk Semua Kebutuhan Warga Tegalpingen
               </p>
             </div>
@@ -320,7 +324,7 @@
             <div>
               <p class="text-[9px] font-bold text-brand-700 uppercase tracking-wider">Calon Kepala Desa</p>
               <h4 class="text-sm font-black text-slate-900 leading-tight">Alif Setiawan</h4>
-              <p class="text-[9px] text-slate-600 italic">"Maju, Guyub Rukun, dan Siap Melayani Warga"</p>
+              <p class="text-[9px] text-brand-800 font-extrabold uppercase tracking-tight">"Yang Muda Berkarya, Untuk Membangun Desa"</p>
             </div>
           </div>
 
@@ -335,7 +339,7 @@
             <div class="p-2.5 bg-white border-4 border-brand-700 rounded-2xl shadow-lg inline-block">
               <img 
                 id="qr-preview-sticker"
-                src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://prototype-cakades-tegalpingen.vercel.app&color=047857" 
+                src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A%2F%2Fprototype-cakades-tegalpingen.vercel.app%2F&color=047857" 
                 alt="Barcode Warga" 
                 class="w-36 h-36 mx-auto rounded-lg"
               />
