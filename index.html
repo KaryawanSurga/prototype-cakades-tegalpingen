@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Kartu Pintar Warga - Alif Setiawan | Calon Kades Desa Tegalpingen, Purbalingga</title>
+  
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+              800: '#065f46',
+              900: '#064e3b',
+            },
+            accent: {
+              gold: '#f59e0b',
+              amber: '#d97706',
+            }
+          },
+          boxShadow: {
+            'card': '0 10px 30px -5px rgba(0, 0, 0, 0.08), 0 4px 10px -2px rgba(0, 0, 0, 0.04)',
+            'glow': '0 4px 20px -2px rgba(16, 185, 129, 0.35)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+    .tap-highlight-none {
+      -webkit-tap-highlight-color: transparent;
+    }
+    /* Smooth animated pill transitions */
+    .filter-btn.active {
+      background: #059669;
+      color: #ffffff;
+      box-shadow: 0 4px 14px -2px rgba(5, 150, 105, 0.4);
+      border-color: #059669;
+    }
+  </style>
+</head>
+
+<body class="bg-slate-100 font-sans text-slate-800 antialiased min-h-screen flex justify-center py-0 sm:py-6 px-0 sm:px-4">
+
+  <!-- Mobile Simulator Wrapper (Max 480px) -->
+  <main class="w-full max-w-md bg-white sm:rounded-3xl shadow-card overflow-hidden flex flex-col min-h-screen sm:min-h-0 sm:border sm:border-slate-200/80 relative">
+    
+    <!-- Top Action Float (Share & QR Code) -->
+    <div class="absolute top-4 right-4 z-20 flex gap-2">
+      <button onclick="openShareModal()" class="w-9 h-9 rounded-full bg-white/80 backdrop-blur-md text-slate-700 flex items-center justify-center shadow-md hover:bg-white active:scale-95 transition tap-highlight-none" title="Bagikan Kartu">
+        <i class="fa-solid fa-share-nodes text-sm"></i>
+      </button>
+      <button onclick="openQrModal()" class="w-9 h-9 rounded-full bg-white/80 backdrop-blur-md text-slate-700 flex items-center justify-center shadow-md hover:bg-white active:scale-95 transition tap-highlight-none" title="Tampilkan Barcode">
+        <i class="fa-solid fa-qrcode text-sm"></i>
+      </button>
+    </div>
+
+    <!-- HEADER / BANNER & PROFILE CARD (SMART BUSINESS CARD STYLE) -->
+    <header class="relative">
+      <!-- Decorative Banner with Landscape Photo (Jembatan Merah Tegalpingen & Gunung) -->
+      <div class="h-64 relative overflow-hidden bg-slate-900">
+        <!-- Landscape Image (Framed to put Jembatan Merah right in the center) -->
+        <img 
+          src="Asset Image/banner-tegalpingen.jpeg" 
+          onerror="this.src='Asset Image/WhatsApp Image 2026-09-27 at 10.36.59.jpeg'"
+          alt="Jembatan Merah Tegalpingen" 
+          class="w-full h-full object-cover object-[center_52%]"
+        />
+
+        <!-- Subtle Gradient for Contrast & Legibility -->
+        <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/20 pointer-events-none"></div>
+
+        <!-- Village Badge -->
+        <div class="absolute top-4 left-4 z-10 flex items-center gap-1.5 bg-black/40 backdrop-blur-md text-white text-[11px] font-semibold px-3 py-1 rounded-full border border-white/20 shadow-sm">
+          <i class="fa-solid fa-location-dot text-emerald-400"></i>
+          <span>Desa Tegalpingen, Pengadegan</span>
+        </div>
+      </div>
+
+      <!-- Profile Section -->
+      <div class="px-5 pt-0 pb-4 text-center relative -mt-16">
+        <!-- Avatar Wrapper (Nomor Urut Dihapus Sesuai Permintaan) -->
+        <div class="relative inline-block mx-auto mb-3">
+          <div class="w-28 h-28 rounded-full border-4 border-white shadow-xl overflow-hidden bg-slate-200 mx-auto ring-2 ring-emerald-600/20">
+            <img 
+              src="Asset Image/cakades.jpeg" 
+              onerror="this.src='Asset Image/WhatsApp Image 2026-09-27 at 10.36.35.jpeg'"
+              alt="Calon Kades Desa Tegalpingen" 
+              class="w-full h-full object-cover object-[center_12%]"
+            />
+          </div>
+        </div>
+
+        <!-- Name & Title -->
+        <div class="flex items-center justify-center gap-1.5">
+          <h1 class="text-xl font-extrabold text-slate-900 tracking-tight">Alif Setiawan</h1>
+          <span class="text-blue-500" title="Akun Terverifikasi"><i class="fa-solid fa-circle-check text-sm"></i></span>
+        </div>
+        <p class="text-xs font-semibold text-brand-700 uppercase tracking-wider mt-0.5">Calon Kepala Desa Tegalpingen, Pengadegan</p>
+        <p class="text-xs text-slate-500 mt-1.5 px-4 leading-relaxed italic">
+          "Membangun Desa Tegalpingen yang Maju, Guyub Rukun, Transparan, dan Siaga 24 Jam."
+        </p>
+
+        <!-- TOP PRIMARY ACTIONS: WhatsApp & Website -->
+        <div class="grid grid-cols-2 gap-2.5 mt-4">
+          <!-- WhatsApp Aspirasi / Utama -->
+          <a href="https://wa.me/6281234567890?text=Halo%20Mas%20Alif%20Setiawan%2C%20saya%20warga%20Desa%20Tegalpingen%20ingin%20menyampaikan%20aspirasi%2Fpertanyaan..." 
+             target="_blank"
+             class="flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-600 to-brand-600 hover:from-emerald-700 hover:to-brand-700 text-white py-2.5 px-3 rounded-xl text-xs font-bold shadow-glow active:scale-[0.98] transition tap-highlight-none">
+            <i class="fa-brands fa-whatsapp text-base"></i>
+            <span>Lapor Pak Kades</span>
+          </a>
+
+          <!-- Website Profil / Visi Misi -->
+          <a href="#direktori-kontak" 
+             onclick="scrollToDirectory()"
+             class="flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-white py-2.5 px-3 rounded-xl text-xs font-bold shadow-md active:scale-[0.98] transition tap-highlight-none">
+            <i class="fa-solid fa-address-book text-sm text-emerald-400"></i>
+            <span>Buku Kontak Desa</span>
+          </a>
+        </div>
+
+        <!-- SOCIAL MEDIA ROW (SiTapNext Style) -->
+        <div class="flex items-center justify-center gap-3 mt-3 pt-3 border-t border-slate-100">
+          <span class="text-[11px] font-semibold text-slate-400 mr-1">Medsos Resmi:</span>
+          
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/alifsetiawan_051194" 
+             target="_blank" 
+             class="w-9 h-9 rounded-full bg-gradient-to-tr from-amber-500 via-pink-500 to-purple-600 text-white flex items-center justify-center text-sm shadow-sm hover:opacity-90 active:scale-95 transition" 
+             title="Instagram: @alifsetiawan_051194">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <!-- TikTok -->
+          <a href="https://www.tiktok.com/@alifsetiawan0511" 
+             target="_blank" 
+             class="w-9 h-9 rounded-full bg-slate-900 text-white flex items-center justify-center text-sm shadow-sm hover:bg-black active:scale-95 transition" 
+             title="TikTok: @alifsetiawan0511">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/Alifsetiawan" 
+             target="_blank" 
+             class="w-9 h-9 rounded-full bg-blue-600 text-white flex items-center justify-center text-sm shadow-sm hover:bg-blue-700 active:scale-95 transition" 
+             title="Facebook: Alifsetiawan">
+            <i class="fa-brands fa-facebook-f text-xs"></i>
+          </a>
+
+          <!-- Simpan Kontak (vCard) -->
+          <button onclick="downloadVCard()" 
+                  class="w-9 h-9 rounded-full bg-emerald-50 border border-emerald-200 text-brand-700 flex items-center justify-center text-xs hover:bg-brand-100 active:scale-95 transition" 
+                  title="Simpan Kontak Calon Kades">
+            <i class="fa-solid fa-user-plus"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- SECTION: DIREKTORI KONTAK PENTING DESA (MAIN FEATURE) -->
+    <section id="direktori-kontak" class="flex-1 bg-slate-50 px-4 py-4 rounded-t-3xl border-t border-slate-200/70">
+      
+      <!-- Section Title & Badge -->
+      <div class="flex items-center justify-between mb-3">
+        <div>
+          <h2 class="text-sm font-bold text-slate-900 flex items-center gap-1.5">
+            <i class="fa-solid fa-phone-volume text-brand-600 text-xs"></i>
+            <span>Direktori Kontak Cepat Desa</span>
+          </h2>
+          <p class="text-[11px] text-slate-500">Klik WhatsApp / Telepon untuk hubungi langsung</p>
+        </div>
+        <span id="contact-count" class="text-[10px] font-bold bg-emerald-100 text-brand-800 px-2 py-0.5 rounded-full">
+          12 Kontak
+        </span>
+      </div>
+
+      <!-- SEARCH BAR (FITUR PENCARIAN KONTAK) -->
+      <div class="relative mb-3">
+        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
+          <i class="fa-solid fa-magnifying-glass text-xs"></i>
+        </div>
+        <input 
+          type="text" 
+          id="search-input" 
+          placeholder="Cari kontak, RT, RW, Bidan, Ambulans..." 
+          class="w-full pl-9 pr-9 py-2.5 bg-white border border-slate-200 rounded-xl text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 shadow-sm transition"
+          oninput="handleSearch(this.value)"
+        />
+        <button 
+          id="clear-search-btn" 
+          onclick="clearSearch()" 
+          class="hidden absolute inset-y-0 right-0 pr-3 flex items-center text-slate-400 hover:text-slate-600">
+          <i class="fa-solid fa-circle-xmark text-xs"></i>
+        </button>
+      </div>
+
+      <!-- CATEGORY FILTER CHIPS -->
+      <div class="flex gap-1.5 overflow-x-auto pb-2 scrollbar-none text-xs -mx-1 px-1 mb-3">
+        <button onclick="setFilter('semua')" data-category="semua" class="filter-btn active whitespace-nowrap px-3 py-1.5 rounded-lg border border-slate-200 bg-white text-slate-600 font-semibold text-[11px] transition tap-highlight-none">
+          Semua
+        </button>
+        <button onclick="setFilter('darurat')" data-category="darurat" class="filter-btn whitespace-nowrap px-3 py-1.5 rounded-lg border border-slate-200 bg-white text-slate-600 font-semibold text-[11px] transition tap-highlight-none">
+          🚨 Darurat
+        </button>
+        <button onclick="setFilter('perangkat')" data-category="perangkat" class="filter-btn whitespace-nowrap px-3 py-1.5 rounded-lg border border-slate-200 bg-white text-slate-600 font-semibold text-[11px] transition tap-highlight-none">
+          🏛️ Perangkat Desa
+        </button>
+        <button onclick="setFilter('kadus')" data-category="kadus" class="filter-btn whitespace-nowrap px-3 py-1.5 rounded-lg border border-slate-200 bg-white text-slate-600 font-semibold text-[11px] transition tap-highlight-none">
+          🌾 Kepala Dusun
+        </button>
+        <button onclick="setFilter('rtrw')" data-category="rtrw" class="filter-btn whitespace-nowrap px-3 py-1.5 rounded-lg border border-slate-200 bg-white text-slate-600 font-semibold text-[11px] transition tap-highlight-none">
+          🏘️ RT / RW
+        </button>
+      </div>
+
+      <!-- CONTACT LIST CONTAINER -->
+      <div id="contact-list" class="space-y-2">
+        <!-- Rendered by JavaScript -->
+      </div>
+
+      <!-- Empty State (When no search matches) -->
+      <div id="empty-state" class="hidden text-center py-8">
+        <div class="w-12 h-12 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center mx-auto mb-2 text-lg">
+          <i class="fa-solid fa-address-book"></i>
+        </div>
+        <p class="text-xs font-bold text-slate-700">Kontak Tidak Ditemukan</p>
+        <p class="text-[11px] text-slate-400 mt-0.5">Coba cari dengan kata kunci lain (contoh: "RT", "Bidan")</p>
+      </div>
+    </section>
+
+    <!-- FOOTER: SiTapNext & Campaign Branding -->
+    <footer class="bg-slate-100 border-t border-slate-200 px-4 py-3 text-center">
+      <div class="flex items-center justify-center gap-1.5 text-[11px] font-bold text-slate-600">
+        <span>Kartu Pintar Digital</span>
+        <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
+        <span class="text-brand-700 font-extrabold tracking-wide">SiTapNext</span>
+      </div>
+      <p class="text-[10px] text-slate-400 mt-0.5">
+        &copy; 2026 Tim Pemenangan Alif Setiawan | Desa Tegalpingen, Pengadegan, Purbalingga
+      </p>
+    </footer>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-slate-900 text-white text-xs font-medium px-4 py-2 rounded-full shadow-xl opacity-0 pointer-events-none transition-all duration-300 flex items-center gap-2">
+      <i class="fa-solid fa-circle-check text-emerald-400"></i>
+      <span id="toast-message">Nomor disalin ke papan klip</span>
+    </div>
+
+    <!-- MODAL: QR CODE BARCODE PREVIEW -->
+    <div id="qr-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-200">
+      <div class="bg-white rounded-3xl p-5 max-w-xs w-full text-center shadow-2xl scale-95 transition-transform duration-200" id="qr-card">
+        <div class="flex justify-between items-center mb-3">
+          <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Scan Barcode Warga</span>
+          <button onclick="closeQrModal()" class="w-7 h-7 rounded-full bg-slate-100 text-slate-500 hover:bg-slate-200 flex items-center justify-center text-xs">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        
+        <!-- Mock QR Code Image -->
+        <div class="p-3 bg-white border-2 border-brand-100 rounded-2xl inline-block shadow-inner">
+          <img 
+            src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://tegalpingen.vercel.app&color=064e3b" 
+            alt="QR Barcode Desa Tegalpingen" 
+            class="w-44 h-44 mx-auto rounded-lg"
+          />
+        </div>
+
+        <p class="text-xs font-bold text-slate-800 mt-3">Akses Cepat 1 Pintu Seluruh Desa</p>
+        <p class="text-[11px] text-slate-500 mt-1">Scan lewat kamera HP untuk langsung membuka kartu pintar ini.</p>
+        
+        <button onclick="copyCurrentUrl()" class="w-full mt-4 py-2 bg-emerald-50 hover:bg-emerald-100 text-brand-700 rounded-xl text-xs font-bold border border-emerald-200 transition">
+          <i class="fa-regular fa-copy mr-1"></i> Salin Link Kartu
+        </button>
+      </div>
+    </div>
+
+    <!-- MODAL: SHARE SHEET -->
+    <div id="share-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-end sm:items-center justify-center p-0 sm:p-4 opacity-0 pointer-events-none transition-opacity duration-200">
+      <div class="bg-white rounded-t-3xl sm:rounded-3xl p-5 w-full max-w-sm text-center shadow-2xl translate-y-full sm:translate-y-0 sm:scale-95 transition-transform duration-200" id="share-card">
+        <div class="flex justify-between items-center mb-3">
+          <h3 class="text-sm font-bold text-slate-800">Bagikan Kartu Pintar Ini</h3>
+          <button onclick="closeShareModal()" class="w-7 h-7 rounded-full bg-slate-100 text-slate-500 hover:bg-slate-200 flex items-center justify-center text-xs">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <p class="text-xs text-slate-500 mb-4 text-left">Sebarkan kartu kontak resmi desa ini ke grup WA warga dan keluarga:</p>
+        
+        <div class="grid grid-cols-4 gap-2 mb-4">
+          <a id="share-wa" href="#" target="_blank" class="flex flex-col items-center gap-1.5 p-2 rounded-xl hover:bg-slate-50 transition">
+            <div class="w-10 h-10 rounded-full bg-emerald-500 text-white flex items-center justify-center text-lg">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <span class="text-[10px] font-medium text-slate-700">WhatsApp</span>
+          </a>
+          <a id="share-fb" href="#" target="_blank" class="flex flex-col items-center gap-1.5 p-2 rounded-xl hover:bg-slate-50 transition">
+            <div class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center text-lg">
+              <i class="fa-brands fa-facebook-f"></i>
+            </div>
+            <span class="text-[10px] font-medium text-slate-700">Facebook</span>
+          </a>
+          <a id="share-telegram" href="#" target="_blank" class="flex flex-col items-center gap-1.5 p-2 rounded-xl hover:bg-slate-50 transition">
+            <div class="w-10 h-10 rounded-full bg-sky-500 text-white flex items-center justify-center text-lg">
+              <i class="fa-brands fa-telegram"></i>
+            </div>
+            <span class="text-[10px] font-medium text-slate-700">Telegram</span>
+          </a>
+          <button onclick="copyCurrentUrl()" class="flex flex-col items-center gap-1.5 p-2 rounded-xl hover:bg-slate-50 transition">
+            <div class="w-10 h-10 rounded-full bg-slate-800 text-white flex items-center justify-center text-lg">
+              <i class="fa-solid fa-link"></i>
+            </div>
+            <span class="text-[10px] font-medium text-slate-700">Salin Link</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- JAVASCRIPT DATA & LOGIC -->
+  <script>
+    // DATA KONTAK PENTING DESA (PROTOTYPE MOCK DATA)
+    const contactsData = [
+      // Kategori: Darurat
+      {
+        id: 'c1',
+        name: 'Ambulans Siaga Desa 24 Jam',
+        role: 'Layanan Darurat Medis',
+        category: 'darurat',
+        phone: '081299990001',
+        icon: 'fa-truck-medical',
+        color: 'red',
+        badge: 'Siaga 24 Jam',
+        waMessage: 'Halo Tim Ambulans Siaga Desa Tegalpingen, mohon bantuan ada kondisi darurat medis di lokasi: '
+      },
+      {
+        id: 'c2',
+        name: 'Ibu Siti Aminah, Amd.Keb',
+        role: 'Bidan Desa Tegalpingen',
+        category: 'darurat',
+        phone: '081299990002',
+        icon: 'fa-user-doctor',
+        color: 'emerald',
+        badge: 'Kesehatan Warga',
+        waMessage: 'Halo Bu Bidan Siti, saya warga Desa Tegalpingen ingin konsultasi perihal kesehatan: '
+      },
+      {
+        id: 'c3',
+        name: 'Serka Bambang (Babinsa)',
+        role: 'Keamanan TNI (Koramil Pengadegan)',
+        category: 'darurat',
+        phone: '081299990003',
+        icon: 'fa-shield-halved',
+        color: 'blue',
+        badge: 'TNI / Babinsa',
+        waMessage: 'Selamat siang Pak Babinsa Desa Tegalpingen, saya warga ingin menginfokan: '
+      },
+      {
+        id: 'c4',
+        name: 'Aipda Hendra (Bhabinkamtibmas)',
+        role: 'Keamanan Polri (Polsek Pengadegan)',
+        category: 'darurat',
+        phone: '081299990004',
+        icon: 'fa-shield-cat',
+        color: 'indigo',
+        badge: 'Polri / Polsek',
+        waMessage: 'Selamat siang Pak Bhabinkamtibmas Tegalpingen, saya warga ingin melapor perihal kamtibmas: '
+      },
+
+      // Kategori: Perangkat Desa
+      {
+        id: 'c5',
+        name: 'Drs. Supriyanto',
+        role: 'Sekretaris Desa (Sekdes Tegalpingen)',
+        category: 'perangkat',
+        phone: '081388880001',
+        icon: 'fa-building-columns',
+        color: 'slate',
+        badge: 'Administrasi',
+        waMessage: 'Selamat pagi/siang Pak Sekdes Tegalpingen, saya warga ingin menanyakan perihal administrasi: '
+      },
+      {
+        id: 'c6',
+        name: 'M. Rizki, S.E.',
+        role: 'Kaur Keuangan & Anggaran',
+        category: 'perangkat',
+        phone: '081388880002',
+        icon: 'fa-wallet',
+        color: 'slate',
+        badge: 'Keuangan',
+        waMessage: 'Halo Pak Rizki Kaur Keuangan, saya warga ingin bertanya terkait: '
+      },
+      {
+        id: 'c7',
+        name: 'Endang Wahyuni, S.Sos',
+        role: 'Kasi Pelayanan Kantor Desa',
+        category: 'perangkat',
+        phone: '081388880003',
+        icon: 'fa-file-lines',
+        color: 'slate',
+        badge: 'Layanan KTP/Surat',
+        waMessage: 'Halo Bu Endang Kasi Pelayanan Desa Tegalpingen, saya ingin menanyakan surat pengantar: '
+      },
+
+      // Kategori: Kepala Dusun (Kadus)
+      {
+        id: 'c8',
+        name: 'Pak Sugiono',
+        role: 'Kepala Dusun I (Tegalpingen 1)',
+        category: 'kadus',
+        phone: '085277770001',
+        icon: 'fa-house-chimney',
+        color: 'amber',
+        badge: 'Dusun I',
+        waMessage: 'Halo Pak Kadus 1 Tegalpingen, saya warga Dusun I ingin menyampaikan: '
+      },
+      {
+        id: 'c9',
+        name: 'Pak Martono',
+        role: 'Kepala Dusun II (Tegalpingen 2)',
+        category: 'kadus',
+        phone: '085277770002',
+        icon: 'fa-house-chimney',
+        color: 'amber',
+        badge: 'Dusun II',
+        waMessage: 'Halo Pak Kadus 2 Tegalpingen, saya warga Dusun II ingin menyampaikan: '
+      },
+      {
+        id: 'c10',
+        name: 'Pak Gunawan',
+        role: 'Kepala Dusun III (Tegalpingen 3)',
+        category: 'kadus',
+        phone: '085277770003',
+        icon: 'fa-house-chimney',
+        color: 'amber',
+        badge: 'Dusun III',
+        waMessage: 'Halo Pak Kadus 3 Tegalpingen, saya warga Dusun III ingin menyampaikan: '
+      },
+
+      // Kategori: RT / RW
+      {
+        id: 'c11',
+        name: 'Pak Slamet Riyadi',
+        role: 'Ketua RW 01 (Desa Tegalpingen)',
+        category: 'rtrw',
+        phone: '087866660001',
+        icon: 'fa-users',
+        color: 'emerald',
+        badge: 'RW 01',
+        waMessage: 'Halo Pak RW Slamet Desa Tegalpingen, saya warga RW 01 ingin menanyakan: '
+      },
+      {
+        id: 'c12',
+        name: 'Pak Joko Sutrisno',
+        role: 'Ketua RT 02 / RW 01 (Tegalpingen)',
+        category: 'rtrw',
+        phone: '087866660002',
+        icon: 'fa-user-group',
+        color: 'emerald',
+        badge: 'RT 02',
+        waMessage: 'Halo Pak RT Joko Tegalpingen, saya warga RT 02 mau minta izin/tanya terkait: '
+      }
+    ];
+
+    let currentFilter = 'semua';
+    let searchQuery = '';
+
+    // RENDER CONTACT LIST
+    function renderContacts() {
+      const container = document.getElementById('contact-list');
+      const emptyState = document.getElementById('empty-state');
+      const countBadge = document.getElementById('contact-count');
+
+      const filtered = contactsData.filter(contact => {
+        const matchCategory = currentFilter === 'semua' || contact.category === currentFilter;
+        const query = searchQuery.toLowerCase().trim();
+        const matchSearch = !query || 
+          contact.name.toLowerCase().includes(query) ||
+          contact.role.toLowerCase().includes(query) ||
+          contact.badge.toLowerCase().includes(query) ||
+          contact.phone.includes(query);
+        return matchCategory && matchSearch;
+      });
+
+      countBadge.innerText = `${filtered.length} Kontak`;
+
+      if (filtered.length === 0) {
+        container.innerHTML = '';
+        emptyState.classList.remove('hidden');
+        return;
+      }
+
+      emptyState.classList.add('hidden');
+
+      container.innerHTML = filtered.map(item => {
+        // WhatsApp URL
+        const cleanPhone = item.phone.replace(/^0/, '62');
+        const encodedMsg = encodeURIComponent(item.waMessage);
+        const waUrl = `https://wa.me/${cleanPhone}?text=${encodedMsg}`;
+
+        // Badge Styling
+        let badgeBg = 'bg-slate-100 text-slate-700';
+        let iconBg = 'bg-slate-100 text-slate-600';
+        if (item.category === 'darurat') {
+          badgeBg = 'bg-red-50 text-red-700 border border-red-200/60';
+          iconBg = 'bg-red-100 text-red-600';
+        } else if (item.category === 'kadus') {
+          badgeBg = 'bg-amber-50 text-amber-700 border border-amber-200/60';
+          iconBg = 'bg-amber-100 text-amber-600';
+        } else if (item.category === 'rtrw') {
+          badgeBg = 'bg-emerald-50 text-brand-700 border border-emerald-200/60';
+          iconBg = 'bg-emerald-100 text-brand-600';
+        }
+
+        return `
+          <div class="bg-white p-3 rounded-2xl border border-slate-200/80 shadow-xs hover:shadow-md transition flex items-center justify-between gap-3 group">
+            <!-- Left: Avatar Icon & Info -->
+            <div class="flex items-center gap-3 min-w-0">
+              <div class="w-10 h-10 rounded-xl ${iconBg} flex items-center justify-center shrink-0 text-sm">
+                <i class="fa-solid ${item.icon}"></i>
+              </div>
+              <div class="min-w-0">
+                <div class="flex items-center gap-1.5 flex-wrap">
+                  <h3 class="text-xs font-bold text-slate-900 truncate leading-tight">${item.name}</h3>
+                  <span class="text-[9px] font-semibold px-1.5 py-0.2 rounded-md ${badgeBg}">
+                    ${item.badge}
+                  </span>
+                </div>
+                <p class="text-[11px] text-slate-500 truncate mt-0.5">${item.role}</p>
+                <p class="text-[10px] text-slate-400 font-mono mt-0.5">${item.phone}</p>
+              </div>
+            </div>
+
+            <!-- Right: Action Buttons (WhatsApp & Call & Copy) -->
+            <div class="flex items-center gap-1 shrink-0">
+              <!-- Copy Number Button -->
+              <button 
+                onclick="copyNumber('${item.phone}')" 
+                class="w-8 h-8 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center text-xs transition active:scale-95" 
+                title="Salin Nomor">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+
+              <!-- Phone Call Button -->
+              <a 
+                href="tel:${item.phone}" 
+                class="w-8 h-8 rounded-xl bg-slate-100 hover:bg-blue-50 hover:text-blue-600 text-slate-600 flex items-center justify-center text-xs transition active:scale-95" 
+                title="Telepon Langsung">
+                <i class="fa-solid fa-phone"></i>
+              </a>
+
+              <!-- WhatsApp Direct Button -->
+              <a 
+                href="${waUrl}" 
+                target="_blank" 
+                class="h-8 px-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white flex items-center gap-1 text-[11px] font-bold shadow-xs active:scale-95 transition"
+                title="Chat WhatsApp">
+                <i class="fa-brands fa-whatsapp text-sm"></i>
+                <span class="hidden xs:inline">WA</span>
+              </a>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // SEARCH HANDLER
+    function handleSearch(val) {
+      searchQuery = val;
+      const clearBtn = document.getElementById('clear-search-btn');
+      if (val.trim()) {
+        clearBtn.classList.remove('hidden');
+      } else {
+        clearBtn.classList.add('hidden');
+      }
+      renderContacts();
+    }
+
+    function clearSearch() {
+      const input = document.getElementById('search-input');
+      input.value = '';
+      searchQuery = '';
+      document.getElementById('clear-search-btn').classList.add('hidden');
+      renderContacts();
+      input.focus();
+    }
+
+    // FILTER HANDLER
+    function setFilter(cat) {
+      currentFilter = cat;
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        if (btn.getAttribute('data-category') === cat) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+      renderContacts();
+    }
+
+    // SCROLL TO DIRECTORY
+    function scrollToDirectory() {
+      document.getElementById('direktori-kontak').scrollIntoView({ behavior: 'smooth' });
+      document.getElementById('search-input').focus();
+    }
+
+    // COPY NUMBER & SHOW TOAST
+    function copyNumber(number) {
+      navigator.clipboard.writeText(number).then(() => {
+        showToast(`Nomor ${number} disalin ke clipboard!`);
+      }).catch(() => {
+        showToast(`Nomor: ${number}`);
+      });
+    }
+
+    function copyCurrentUrl() {
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        showToast('Link kartu pintar berhasil disalin!');
+      });
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toast-message');
+      toastMsg.innerText = message;
+      toast.classList.remove('opacity-0', 'pointer-events-none');
+      toast.classList.add('opacity-100');
+
+      setTimeout(() => {
+        toast.classList.remove('opacity-100');
+        toast.classList.add('opacity-0', 'pointer-events-none');
+      }, 2500);
+    }
+
+    // MODAL HANDLERS
+    function openQrModal() {
+      const modal = document.getElementById('qr-modal');
+      const card = document.getElementById('qr-card');
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      modal.classList.add('opacity-100');
+      card.classList.remove('scale-95');
+      card.classList.add('scale-100');
+    }
+
+    function closeQrModal() {
+      const modal = document.getElementById('qr-modal');
+      const card = document.getElementById('qr-card');
+      modal.classList.remove('opacity-100');
+      modal.classList.add('opacity-0', 'pointer-events-none');
+      card.classList.remove('scale-100');
+      card.classList.add('scale-95');
+    }
+
+    function openShareModal() {
+      const modal = document.getElementById('share-modal');
+      const card = document.getElementById('share-card');
+      
+      const currentUrl = encodeURIComponent(window.location.href);
+      const shareText = encodeURIComponent('Akses Kartu Pintar & Direktori Kontak Lengkap Desa Tegalpingen, Kec. Pengadegan, Purbalingga: ');
+      
+      document.getElementById('share-wa').href = `https://api.whatsapp.com/send?text=${shareText}${currentUrl}`;
+      document.getElementById('share-fb').href = `https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`;
+      document.getElementById('share-telegram').href = `https://t.me/share/url?url=${currentUrl}&text=${shareText}`;
+
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      modal.classList.add('opacity-100');
+      card.classList.remove('translate-y-full', 'sm:scale-95');
+      card.classList.add('translate-y-0', 'sm:scale-100');
+    }
+
+    function closeShareModal() {
+      const modal = document.getElementById('share-modal');
+      const card = document.getElementById('share-card');
+      modal.classList.remove('opacity-100');
+      modal.classList.add('opacity-0', 'pointer-events-none');
+      card.classList.remove('translate-y-0', 'sm:scale-100');
+      card.classList.add('translate-y-full', 'sm:scale-95');
+    }
+
+    // VCARD DOWNLOAD (SMART BUSINESS CARD FUNCTIONALITY)
+    function downloadVCard() {
+      const vcardData = `BEGIN:VCARD
+VERSION:3.0
+N:Setiawan;Alif;;;
+FN:Alif Setiawan (Calon Kades Tegalpingen)
+ORG:Pemerintah Desa Tegalpingen, Kec. Pengadegan, Purbalingga
+TITLE:Calon Kepala Desa Periode 2026 - 2032
+TEL;TYPE=CELL,VOICE:+6281234567890
+NOTE:Aspirasi Warga & Pelayanan 24 Jam Desa Tegalpingen, Pengadegan, Purbalingga
+END:VCARD`;
+
+      const blob = new Blob([vcardData], { type: 'text/vcard;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', 'Alif_Setiawan_Calon_Kades_Tegalpingen.vcf');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      showToast('Kontak Alif Setiawan diunduh (.vcf)!');
+    }
+
+    // Close modal on backdrop click
+    window.addEventListener('click', (e) => {
+      const qrModal = document.getElementById('qr-modal');
+      const shareModal = document.getElementById('share-modal');
+      if (e.target === qrModal) closeQrModal();
+      if (e.target === shareModal) closeShareModal();
+    });
+
+    // Initial render
+    document.addEventListener('DOMContentLoaded', () => {
+      renderContacts();
+    });
+  </script>
+</body>
+</html>
