@@ -159,38 +159,38 @@
           <!-- Top Row: Logo & Chip Card -->
           <div class="relative z-10 flex items-start justify-between">
             <div class="flex items-center gap-2">
-              <div class="w-8 h-8 rounded-lg bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center text-emerald-300 text-xs">
+              <div class="w-7 h-7 rounded-lg bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center text-emerald-300 text-xs">
                 <i class="fa-solid fa-address-card"></i>
               </div>
               <div>
-                <p class="text-[9px] font-bold uppercase tracking-widest text-emerald-400">KARTU PINTAR WARGA</p>
-                <p class="text-[11px] font-extrabold text-white">Desa Tegalpingen</p>
+                <p class="text-[9px] font-black uppercase tracking-widest text-emerald-400">KARTU PINTAR WARGA</p>
+                <p class="text-xs font-black text-white leading-tight">Desa Tegalpingen</p>
               </div>
             </div>
 
             <!-- Smart Chip Graphic -->
-            <div class="w-9 h-7 rounded-md bg-gradient-to-tr from-amber-400 via-yellow-200 to-amber-500 border border-amber-600/50 shadow-inner flex items-center justify-center opacity-90">
-              <div class="w-6 h-4 border border-amber-800/40 rounded-sm grid grid-cols-2 gap-0.5 opacity-60"></div>
+            <div class="w-8 h-6 rounded-md bg-gradient-to-tr from-amber-400 via-yellow-200 to-amber-500 border border-amber-600/50 shadow-inner flex items-center justify-center opacity-90">
+              <div class="w-5 h-3.5 border border-amber-800/40 rounded-sm grid grid-cols-2 gap-0.5 opacity-60"></div>
             </div>
           </div>
 
           <!-- Middle Row: Foto Profil & Identitas CaKades -->
           <div class="relative z-10 flex items-center gap-3.5 my-auto">
             <!-- Foto Avatar -->
-            <div class="w-20 h-20 rounded-xl border-2 border-amber-400 shadow-md overflow-hidden bg-slate-800 shrink-0">
+            <div class="w-20 h-20 rounded-xl border-2 border-amber-400 shadow-lg overflow-hidden bg-slate-800 shrink-0 ring-2 ring-white/20">
               <img src="Asset Image/cakades.jpeg" alt="Alif Setiawan" class="w-full h-full object-cover object-[center_12%]">
             </div>
 
             <!-- Profil Info -->
             <div class="min-w-0">
-              <span class="inline-block px-2 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-[9px] font-bold text-emerald-300 uppercase tracking-wide mb-1">
+              <span class="inline-block px-2.5 py-0.5 rounded-full bg-emerald-500/25 border border-emerald-400/35 text-[9px] font-extrabold text-emerald-300 uppercase tracking-wider mb-1">
                 Calon Kepala Desa
               </span>
               <h3 class="text-base font-black text-white leading-tight truncate tracking-tight">Alif Setiawan</h3>
               <p class="text-[10px] text-slate-300 font-medium">Kec. Pengadegan, Purbalingga</p>
-              <p class="text-[9px] text-amber-300 font-extrabold tracking-tight mt-1 leading-tight uppercase">
-                "Yang Muda Berkarya, Untuk Membangun Desa"
-              </p>
+              <div class="mt-1.5 inline-flex items-center gap-1 px-2 py-0.5 bg-amber-400/20 border border-amber-300/40 rounded-md">
+                <span class="text-[8px] font-black text-amber-300 uppercase tracking-tight">"Yang Muda Berkarya, Untuk Membangun Desa"</span>
+              </div>
             </div>
           </div>
 
@@ -210,10 +210,10 @@
           
           <!-- Top Row: Instruksi Scan -->
           <div class="text-center">
-            <span class="inline-block bg-red-100 text-red-700 font-black text-[9px] px-2.5 py-0.5 rounded-full border border-red-200 uppercase tracking-wider">
-              🚨 PUSAT KONTAK PENTING DESA
+            <span class="inline-flex items-center gap-1.5 bg-red-50 text-red-700 font-black text-[9px] px-2.5 py-0.5 rounded-full border border-red-200 uppercase tracking-wider">
+              <i class="fa-solid fa-bell text-[9px]"></i> PUSAT KONTAK PENTING DESA
             </span>
-            <h4 class="text-xs font-black text-slate-900 mt-1">SCAN UNTUK AKSES SELURUH NOMOR DESA</h4>
+            <h4 class="text-xs font-black text-slate-900 mt-1 uppercase tracking-tight">Scan Untuk Akses Kontak Cepat Desa</h4>
           </div>
 
           <!-- Middle Row: QR Code Besar & Daftar Kontak Cepat -->
@@ -294,12 +294,14 @@
             <img src="Asset Image/banner-tegalpingen.jpeg" alt="Jembatan Merah Tegalpingen" class="absolute inset-0 w-full h-full object-cover object-[center_50%] opacity-30 mix-blend-overlay pointer-events-none">
             
             <div class="relative z-10 flex items-center justify-between">
-              <span class="bg-black/40 backdrop-blur-md px-2.5 py-0.5 rounded-full text-[9px] font-bold border border-white/20">
-                📍 Desa Tegalpingen, Pengadegan
-              </span>
-              <span class="bg-amber-400 text-slate-900 px-2 py-0.5 rounded-md text-[9px] font-black uppercase">
-                Siaga 24 Jam
-              </span>
+              <div class="flex items-center gap-1.5 bg-black/50 backdrop-blur-md px-3 py-1 rounded-full border border-white/25 shadow-sm text-white">
+                <i class="fa-solid fa-location-dot text-emerald-400 text-xs"></i>
+                <span class="text-[10px] font-bold tracking-tight">Desa Tegalpingen, Pengadegan</span>
+              </div>
+              <div class="flex items-center gap-1 bg-amber-400 text-slate-950 px-2.5 py-1 rounded-full text-[10px] font-black uppercase tracking-wider shadow-sm">
+                <i class="fa-solid fa-bolt text-[9px]"></i>
+                <span>Siaga 24 Jam</span>
+              </div>
             </div>
 
             <div class="relative z-10 text-center">
@@ -317,14 +319,16 @@
           </div>
 
           <!-- Candidate Profile Strip -->
-          <div class="px-4 py-2 bg-emerald-50 border-b border-emerald-100 flex items-center gap-3">
-            <div class="w-14 h-14 rounded-full border-2 border-emerald-600 overflow-hidden shadow-sm shrink-0 bg-white">
+          <div class="px-4 py-2.5 bg-emerald-50/90 border-b border-emerald-100 flex items-center gap-3">
+            <div class="w-13 h-13 rounded-full border-2 border-emerald-600 overflow-hidden shadow-sm shrink-0 bg-white ring-2 ring-emerald-500/20">
               <img src="Asset Image/cakades.jpeg" alt="Alif Setiawan" class="w-full h-full object-cover object-[center_12%]">
             </div>
-            <div>
-              <p class="text-[9px] font-bold text-brand-700 uppercase tracking-wider">Calon Kepala Desa</p>
-              <h4 class="text-sm font-black text-slate-900 leading-tight">Alif Setiawan</h4>
-              <p class="text-[9px] text-brand-800 font-extrabold uppercase tracking-tight">"Yang Muda Berkarya, Untuk Membangun Desa"</p>
+            <div class="min-w-0">
+              <span class="inline-block text-[9px] font-extrabold text-brand-700 bg-brand-100 px-2 py-0.5 rounded uppercase tracking-wider">
+                Calon Kepala Desa
+              </span>
+              <h4 class="text-sm font-black text-slate-900 leading-tight tracking-tight mt-0.5">Alif Setiawan</h4>
+              <p class="text-[10px] text-slate-500 font-medium">Kecamatan Pengadegan, Purbalingga</p>
             </div>
           </div>
 

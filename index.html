@@ -103,7 +103,7 @@
         <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/20 pointer-events-none"></div>
 
         <!-- Village Badge -->
-        <div class="absolute top-4 left-4 z-10 flex items-center gap-1.5 bg-black/40 backdrop-blur-md text-white text-[11px] font-semibold px-3 py-1 rounded-full border border-white/20 shadow-sm">
+        <div class="absolute top-4 left-4 z-10 flex items-center gap-1.5 bg-black/50 backdrop-blur-md text-white text-xs font-bold px-3.5 py-1.5 rounded-full border border-white/25 shadow-md">
           <i class="fa-solid fa-location-dot text-emerald-400"></i>
           <span>Desa Tegalpingen, Pengadegan</span>
         </div>
@@ -128,10 +128,13 @@
           <h1 class="text-xl font-extrabold text-slate-900 tracking-tight">Alif Setiawan</h1>
           <span class="text-blue-500" title="Akun Terverifikasi"><i class="fa-solid fa-circle-check text-sm"></i></span>
         </div>
-        <p class="text-xs font-semibold text-brand-700 uppercase tracking-wider mt-0.5">Calon Kepala Desa Tegalpingen, Pengadegan</p>
-        <p class="text-xs text-slate-700 mt-1.5 px-4 leading-relaxed font-bold">
-          "Yang Muda Berkarya, Untuk Membangun Desa"
-        </p>
+        <p class="text-[11px] font-bold text-brand-700 uppercase tracking-wider mt-0.5">Calon Kepala Desa Tegalpingen, Pengadegan</p>
+        
+        <!-- Campaign Slogan Pill Badge -->
+        <div class="mt-2.5 inline-flex items-center gap-2 px-3.5 py-1.5 bg-gradient-to-r from-emerald-50 via-brand-50 to-emerald-50 border border-emerald-200/90 rounded-full shadow-xs">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span class="text-xs text-brand-900 font-extrabold tracking-tight">"Yang Muda Berkarya, Untuk Membangun Desa"</span>
+        </div>
 
         <!-- TOP PRIMARY ACTIONS: WhatsApp & Website -->
         <div class="grid grid-cols-2 gap-2.5 mt-4">
@@ -559,7 +562,7 @@
               <div class="min-w-0">
                 <div class="flex items-center gap-1.5 flex-wrap">
                   <h3 class="text-xs font-bold text-slate-900 truncate leading-tight">${item.name}</h3>
-                  <span class="text-[9px] font-semibold px-1.5 py-0.2 rounded-md ${badgeBg}">
+                  <span class="text-[9px] font-bold px-2 py-0.5 rounded-full ${badgeBg} leading-none">
                     ${item.badge}
                   </span>
                 </div>
