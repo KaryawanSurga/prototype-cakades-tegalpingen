@@ -139,7 +139,7 @@
         <!-- TOP PRIMARY ACTIONS: WhatsApp & Website -->
         <div class="grid grid-cols-2 gap-2.5 mt-4">
           <!-- WhatsApp Aspirasi / Utama -->
-          <a href="https://wa.me/6281234567890?text=Halo%20Mas%20Alif%20Setiawan%2C%20saya%20warga%20Desa%20Tegalpingen%20ingin%20menyampaikan%20aspirasi%2Fpertanyaan..." 
+          <a href="https://wa.me/6285607882869?text=Halo%20Mas%20Alif%20Setiawan%2C%20saya%20warga%20Desa%20Tegalpingen%20ingin%20menyampaikan%20aspirasi%2Fpertanyaan..." 
              target="_blank"
              class="flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-600 to-brand-600 hover:from-emerald-700 hover:to-brand-700 text-white py-2.5 px-3 rounded-xl text-xs font-bold shadow-glow active:scale-[0.98] transition tap-highlight-none">
             <i class="fa-brands fa-whatsapp text-base"></i>
@@ -361,6 +361,19 @@
   <script>
     // DATA KONTAK PENTING DESA (PROTOTYPE MOCK DATA)
     const contactsData = [
+      // Kategori: Aspirasi & Calon Kepala Desa
+      {
+        id: 'c0',
+        name: 'Alif Setiawan',
+        role: 'Lapor Pak Kades / Aspirasi Warga',
+        category: 'perangkat',
+        phone: '085607882869',
+        icon: 'fa-comments',
+        color: 'emerald',
+        badge: 'Calon Kades',
+        waMessage: 'Halo Mas Alif Setiawan, saya warga Desa Tegalpingen ingin menyampaikan aspirasi: '
+      },
+
       // Kategori: Darurat
       {
         id: 'c1',
@@ -541,7 +554,10 @@
         // Badge Styling
         let badgeBg = 'bg-slate-100 text-slate-700';
         let iconBg = 'bg-slate-100 text-slate-600';
-        if (item.category === 'darurat') {
+        if (item.badge === 'Calon Kades') {
+          badgeBg = 'bg-emerald-100 text-brand-900 border border-emerald-300 font-extrabold';
+          iconBg = 'bg-brand-700 text-white shadow-sm';
+        } else if (item.category === 'darurat') {
           badgeBg = 'bg-red-50 text-red-700 border border-red-200/60';
           iconBg = 'bg-red-100 text-red-600';
         } else if (item.category === 'kadus') {
@@ -725,7 +741,7 @@ N:Setiawan;Alif;;;
 FN:Alif Setiawan (Calon Kades Tegalpingen)
 ORG:Pemerintah Desa Tegalpingen, Kec. Pengadegan, Purbalingga
 TITLE:Calon Kepala Desa Periode 2026 - 2032
-TEL;TYPE=CELL,VOICE:+6281234567890
+TEL;TYPE=CELL,VOICE:+6285607882869
 NOTE:Aspirasi Warga & Pelayanan 24 Jam Desa Tegalpingen, Pengadegan, Purbalingga
 END:VCARD`;
 
